@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+/* TikTokVerticalScroll.css */
+.tiktok-scroll-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-container {
+  /* display: block; */
+  flex-direction: column; /* Vertical scroll */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-item {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #e8e8e8;
+  /* margin-bottom: 1px; */
+  width: 100%;
+  transition: .3s;
+}
+
+.scroll-item h1{
+  transform: scale(1) translateY(100px);
+  transition: .75s;
+  opacity: 0;
+}
+
+/* Style for the snapped item */
+.scroll-item.snapped {
+  /* background-color: #ff6f61; */
+  color: black;
+}
+
+.scroll-item.snapped h1{
+  transform: scale(1.5);
+  opacity: 1;
+}
