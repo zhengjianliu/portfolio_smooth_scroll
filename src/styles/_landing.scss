@@ -1,0 +1,14 @@
+#Landing{
+    h1{
+        font-size: 4rem;
+        transform: translateY(100px) scale(0.7);
+        opacity: 0;
+        transition: 1s;
+    }
+    &.snapped{
+        h1{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}

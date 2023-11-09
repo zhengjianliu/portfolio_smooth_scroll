@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  &.dark__theme{
+    .main-scroll-container{
+      .scroll-container{
+        .page{
+          background:rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+@import './styles/main.scss'

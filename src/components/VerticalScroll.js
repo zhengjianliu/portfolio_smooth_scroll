@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Page from './Page';
+import About from '../pages/About';
+import Landing from '../pages/Landing';
+import Projects from '../pages/Projects';
+import Blogs from '../pages/Blogs';
+import Footer from '../pages/Footer';
 
-const TikTokVerticalScroll = () => {
+const VerticalScroll = () => {
   const [snapped, setSnapped] = useState(0); // 0 indicates no snap
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -35,16 +41,16 @@ const TikTokVerticalScroll = () => {
   }, []);
 
   return (
-    <div className={`tiktok-scroll-container${isScrolling ? ' scrolling' : ''}`}>
+    <div className={`main-scroll-container${isScrolling ? ' scrolling' : ''}`}>
       <div className="scroll-container" id="scroll-container">
-        <div className={`scroll-item ${snapped === 0 ? 'snapped' : ''}`}><h1>Item 1</h1></div>
-        <div className={`scroll-item ${snapped === 1 ? 'snapped' : ''}`}><h1>Item 2</h1></div>
-        <div className={`scroll-item ${snapped === 2 ? 'snapped' : ''}`}><h1>Item 3</h1></div>
-        <div className={`scroll-item ${snapped === 3 ? 'snapped' : ''}`}><h1>Item 4</h1></div>
-        {/* Add more scroll items as needed */}
+        <Page snapped={snapped === 0} Child={Landing}/>
+        <Page snapped={snapped === 1} Child={About}/>
+        <Page snapped={snapped === 2} Child={Projects}/>
+        <Page snapped={snapped === 3} Child={Blogs}/>
+        <Page snapped={snapped === 4} Child={Footer}/>
       </div>
     </div>
   );
 };
 
-export default TikTokVerticalScroll;
+export default VerticalScroll;

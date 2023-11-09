@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: merriweather;
+    font-style: normal;
+}
+
+html,body{
+    font-size: 16px;
+}

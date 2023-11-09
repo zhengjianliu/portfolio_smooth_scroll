@@ -1,12 +1,14 @@
 // src/App.js
 import React from 'react';
-import './App.css';
-import TikTokScroll from './TikTokScroll';
+import './App.scss';
+import { useSelector } from 'react-redux';
+import VerticalScroll from './components/VerticalScroll';
 
 function App() {
+  const isDark = useSelector((state) => state.theme.isDarkMode);
   return (
-    <div className="App">
-      <TikTokScroll />
+    <div className={`App ${isDark?'dark__theme':''}`}>
+      <VerticalScroll />
     </div>
   );
 }
