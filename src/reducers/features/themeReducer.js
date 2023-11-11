@@ -4,11 +4,11 @@ import { createSlice } from '@reduxjs/toolkit';
 export const themeReducer = createSlice({
   name: 'themeReducer',
   initialState: {
-    isDarkMode:false,
+    isDark:false,
   },
   reducers: {
     changeMode: state => {
-      state.isDarkMode = !state.isDarkMode;
+      state.isDark = !state.isDark;
     }
     // You can add more reducer functions here as needed
   },

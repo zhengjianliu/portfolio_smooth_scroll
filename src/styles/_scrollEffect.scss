@@ -15,15 +15,14 @@
     .page {
       scroll-snap-align: start;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-size: 24px;
       background-color: #e8e8e8;
       /* margin-bottom: 1px; */
       width: 100%;
+      position: relative;
       transition: .3s;
       color: black;
+      overflow: hidden;
     }
   }
 }

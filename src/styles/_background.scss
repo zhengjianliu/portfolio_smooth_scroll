@@ -1,0 +1,129 @@
+.backgroundContainer{
+    display: grid;
+    z-index: 0;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    #Background{
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        position: absolute;
+        animation: rotate $timer infinite linear;
+        transition: 1.5s;
+        &.expand{
+            width: max(150vw, 150vh);
+            height: max(150vw, 150vh);
+            opacity: 1;
+        }
+    }
+
+    .refreshButton{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0.7;
+        border-radius: 50%;
+        img{
+            height: 90%;
+            width: 90%;
+            margin: 5%;
+        }
+        &.active{
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 1);
+            animation: spin 1s 1 ease-in-out;
+        }
+        &:hover{
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+        }
+    }
+    
+}
+
+@keyframes fire {
+    0%{
+        opacity: 0.3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
+@keyframes unfire {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes spark {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes unspark {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(720deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes unrotate {
+    from{
+        transform: rotate(385deg);
+    }
+    to{
+        transform: rotate(25deg);
+    }
+}

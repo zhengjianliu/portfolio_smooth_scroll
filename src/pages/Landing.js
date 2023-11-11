@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Background from "../components/Background";
+import Typewriter from "../components/Typer";
 const Landing = ({snapped}) =>{
-    console.log(snapped)
     return(
-        <div id="Landing" className={`${snapped?'snapped':''}`}>
-            <h1>Here is Landing Page</h1>
-        </div>
+        <>
+            <div className="body">
+                <div className={`content ${snapped?'snapped':''}`}>
+                    <h3>Hello World!</h3>
+                    <Typewriter titles={["ZHENGJIAN LIU",'a Full Stack Developer', 'a Problem Solver','Ready To Work With You']}/>
+                </div>
+            </div>
+            <Background/>
+        </>
     )
 }
 

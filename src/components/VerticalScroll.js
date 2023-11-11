@@ -5,6 +5,7 @@ import Landing from '../pages/Landing';
 import Projects from '../pages/Projects';
 import Blogs from '../pages/Blogs';
 import Footer from '../pages/Footer';
+import Navigator from './Navigator';
 
 const VerticalScroll = () => {
   const [snapped, setSnapped] = useState(0); // 0 indicates no snap
@@ -43,12 +44,13 @@ const VerticalScroll = () => {
   return (
     <div className={`main-scroll-container${isScrolling ? ' scrolling' : ''}`}>
       <div className="scroll-container" id="scroll-container">
-        <Page snapped={snapped === 0} Child={Landing}/>
-        <Page snapped={snapped === 1} Child={About}/>
-        <Page snapped={snapped === 2} Child={Projects}/>
-        <Page snapped={snapped === 3} Child={Blogs}/>
-        <Page snapped={snapped === 4} Child={Footer}/>
+        <Page snapped={snapped === 0} Child={Landing} id={'Landing'}/>
+        <Page snapped={snapped === 1} Child={About} id={'About'}/>
+        <Page snapped={snapped === 2} Child={Projects} id={'Projects'}/>
+        <Page snapped={snapped === 3} Child={Blogs} id={'Blogs'}/>
+        <Page snapped={snapped === 4} Child={Footer} id={'Footer'}/>
       </div>
+        <Navigator currentPage={snapped}/>
     </div>
   );
 };

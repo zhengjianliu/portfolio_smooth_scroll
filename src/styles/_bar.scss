@@ -1,0 +1,46 @@
+.Bar{
+    height: 100vh;
+    min-height: 1000px;
+    width: 2px;
+    position: absolute;
+    animation: unrotate $timer infinite linear;
+    transform-origin: 0% 100%;
+    border-radius: 100px;
+    transition: 0.5s;
+    // box-shadow: 0px 0px 10px 1px rgb(134, 207, 255);
+    // &:nth-child(even){
+    //     animation: unrotate 120s  infinite linear, unspark 30s infinite linear;
+    // }
+    // &.night{
+    //     width: 2px;
+    //     filter:brightness(2);
+    //     animation: unrotate $timer infinite linear;
+    //     &:nth-child(even){
+    //         animation: unrotate $timer  infinite linear;
+    //     }
+    // }
+    &.night{
+        width: 1px;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 5px;
+            background-color: white;
+            right: -2px;
+            bottom: -2px;
+            box-shadow: 0px 0px 40px 13px rgb(0, 174, 255);
+            border-radius: 50%;
+        }
+        &:nth-child(even){
+            &::after{
+                animation: fire 10s linear infinite;
+            }
+        }
+        &:nth-child(odd){
+            &::after{
+                animation: unfire 10s linear infinite;
+            }
+        }
+    }
+}
