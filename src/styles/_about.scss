@@ -1,0 +1,68 @@
+#About{
+    transition: background-color .5s;
+    .content{
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        margin-top: 15vh;
+        padding: 0 1rem  0 4.5rem;
+        .gridBody{
+            width: 100%;
+            margin: auto;
+            max-width: 1200px;
+            // background-color: grey;
+            height: 60vh;
+            display: block;
+            text-align: left;
+            .introBody{
+                display: flex;
+                // padding: 10px;
+                .greet{
+                    // background-color: $blue;
+                    // padding: 2rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    border-radius: 1rem;
+                    .text{
+                        font-size: 1.5rem;
+                        background-color: $lightblue;
+                        padding: 1rem 2rem;
+                        border-radius: 2.5rem 2.5rem 2.5rem 0 ;
+                        margin: 0;
+                        margin-bottom: 1rem;
+                        width: fit-content;
+                        transition: .5s;
+                        .skills{
+                            margin: 0;
+                            padding: 0;
+                            display: grid;
+                            grid-template-columns: repeat(2,minmax(140px,300px));
+                            grid-gap: 0 10px;
+                            gap: 0 10px;
+                            margin: 10px 0 0;
+                            overflow: hidden;
+                            list-style: none;
+                            li{
+                                display: flex;
+                                align-items: center;
+                                div{
+                                    width: 0;
+                                    height: 0;
+                                    margin-right: 10px;
+                                    border-top: 7px solid transparent;
+                                    border-bottom: 7px solid transparent;
+                                    border-left: 7px solid white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.snapped{
+        }
+    }
+    // &.snapped{
+    //     background-color: $midnight;
+    // }
+}

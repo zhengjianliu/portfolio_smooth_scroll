@@ -1,0 +1,39 @@
+.pageMark{
+    position: absolute;
+    top: 3vh;
+    left: 15vw;
+    z-index: 2;
+    font-weight: bold;
+    color: $blue;
+    font-size: 7rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    p{
+        margin: 0;
+        opacity: 0;
+        transform: translateX(300px);
+        transition: 1s;
+    }
+    span{
+        height: 4px;
+        width: 100vw;
+        background-color: $blue;
+        display: block;
+        margin-left: 100vw;
+        transform: translateY(7px);
+        border-radius: 4px;
+        opacity: 0;
+        transition: 1s;
+    }
+    &.snapped{
+        p{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        span{
+            margin-left: 30px;
+            opacity: 1;
+        }
+    }
+}

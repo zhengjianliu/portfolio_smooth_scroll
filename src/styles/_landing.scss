@@ -1,40 +1,40 @@
 #Landing{
-    .body{
-        width: 100%;
-        height: 100%;
-        z-index: 2;
+    .snappedBody{
         position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .content{
-            h3{
-                margin: 0;
-                margin-bottom: .5rem;
-                font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .content{
+        h3{
+            margin: 0;
+            margin-bottom: .5rem;
+            font-size: 3rem;
+        }
+        .typer{
+            font-size: 2rem;
+            font-weight: bold;
+            transform: translateY(100px) scale(0.7);
+            opacity: 0;
+            margin: auto;
+            width: fit-content;
+            background-color:$blue;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            color: white;
+            transition: 1s;
+            span{
+                text-decoration: underline;
             }
+        }
+        &.snapped{
             .typer{
-                font-size: 2rem;
-                font-weight: bold;
-                transform: translateY(100px) scale(0.7);
-                opacity: 0;
-                margin: auto;
-                width: fit-content;
-                background-color:$blue;
-                padding: 1rem 2rem;
-                border-radius: 40px;
-                color: white;
-                transition: 1s;
-                span{
-                    text-decoration: underline;
-                }
-            }
-            &.snapped{
-                .typer{
-                    transform: translateY(0px);
-                    opacity: 1;
-                }
+                transform: translateY(0px);
+                opacity: 1;
             }
         }
     }
+    // &.snapped{
+    //     background-color: $midnight;
+    // }
 }

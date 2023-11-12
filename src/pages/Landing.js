@@ -4,7 +4,7 @@ import Typewriter from "../components/Typer";
 const Landing = ({snapped}) =>{
     return(
         <>
-            <div className="body">
+            <div className="snappedBody">
                 <div className={`content ${snapped?'snapped':''}`}>
                     <h3>Hello World!</h3>
                     <Typewriter titles={["ZHENGJIAN LIU",'a Full Stack Developer', 'a Problem Solver','Ready To Work With You']}/>
